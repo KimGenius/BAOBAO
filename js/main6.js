@@ -79,7 +79,8 @@ $(function () {
     ;
   });
 
-  $('.right_btn a').click(function () {
+  $('.right_btn a').click(function (e) {
+    e.preventDefault()
     var id = $(this).attr('href')
     var scrollTop = id === '#' ? 0 : $(id).offset().top
     $("html").animate({
