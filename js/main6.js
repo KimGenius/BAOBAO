@@ -32,10 +32,16 @@ $(document).ready(function () {
 });
 
 $(function () {
-
+  var isNav = false
   $("#menu_bar").on("click", function () {
-    $("#nav_wrap").fadeIn(300);
-    $("#nav").animate({"right": "0px"}, 1000, "easeOutCubic");
+    if (isNav) {
+      $("#nav_wrap").fadeOut(300);
+      $("#nav").animate({"right": "-490px"}, 1000, "easeOutCubic");
+    } else {
+      $("#nav_wrap").fadeIn(300);
+      $("#nav").animate({"right": "0px"}, 1000, "easeOutCubic");
+    }
+    isNav = !isNav
   });
 
 
