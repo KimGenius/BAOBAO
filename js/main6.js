@@ -2,6 +2,8 @@
 $(function () {
   $('.menu-wrapper').on('click', function () {
     $('.hamburger-menu').toggleClass('animate');
+    $(this).css('background-color', '#fff')
+    $('header').css('background', 'none')
   });
 });
 
